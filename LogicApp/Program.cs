@@ -17,6 +17,18 @@ namespace LogicApp
             double Y = 28.74;
             bool Cc = (Aa < Bb) | (X > Y);
             Console.WriteLine(Cc);
+
+            var Aaa = 6;
+            var Bbb = 7;
+
+            if (Aaa != Bbb)
+            {
+                Console.WriteLine("Условие истинно");
+            }
+            else
+            {
+                Console.WriteLine("Условие ложно");
+            }
             Console.ReadKey();
         }
     }
