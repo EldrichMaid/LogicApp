@@ -90,7 +90,7 @@ namespace LogicApp
                     break;
             }
 
-            for (int i = 1; i < 5; i++)
+            for (int i = 1;; i++)
             {
                 Console.WriteLine("Iteration {0}", i);
                 switch (Console.ReadLine())
