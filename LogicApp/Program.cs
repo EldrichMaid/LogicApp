@@ -239,11 +239,7 @@ namespace LogicApp
                         Console.WriteLine("Your color is cyan!");
                         break;
                     default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is yellow!");
-                        break;
+                        continue;
                 }
                 kkk++;
 
