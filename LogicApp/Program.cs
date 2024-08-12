@@ -399,6 +399,15 @@ namespace LogicApp
             }
             Console.WriteLine(Counter);
 
+            Console.Write("Поищем положительные числа у двумерного массива");
+            int[,] SearchArrayXY = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            int CounterXY = 0;
+            foreach (var item in SearchArrayXY)
+            {
+                if (item > 0) CounterXY ++;
+            }
+            Console.WriteLine(CounterXY);
+
             Console.ReadKey();
         }
     }
