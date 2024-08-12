@@ -336,6 +336,27 @@ namespace LogicApp
                 Console.WriteLine();
             }
 
+            var TestArray = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            int Local;
+
+            for (int i = 0; i < TestArray.Length; i++)
+            {
+                for (int j = i + 1; j < TestArray.Length; j++)
+                {
+                    if (TestArray[i] > TestArray[j])
+                    {
+                        Local = TestArray[i];
+                        TestArray[i] = TestArray[j];
+                        TestArray[j] = Local;
+                    }
+                }
+            }
+
+            foreach (var result in TestArray)
+            {
+                Console.Write(result);
+            }
+
             Console.ReadKey();
         }
     }
