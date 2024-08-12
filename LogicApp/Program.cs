@@ -459,7 +459,6 @@ namespace LogicApp
             Console.WriteLine("Возраст питомца: {0}", Pet.Age);            
             Console.WriteLine("Количество символов в имени: {0}", Pet.NameCount);
 
-
             Console.ReadKey();
         }
     }
