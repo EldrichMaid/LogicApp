@@ -284,9 +284,7 @@ namespace LogicApp
             }
 
             Console.WriteLine("Введите своё имя");
-
             var name = Console.ReadLine();
-
             Console.WriteLine("Ваше имя по буквам: ");
 
             foreach (var ch in name)
@@ -294,12 +292,9 @@ namespace LogicApp
                 Console.Write(ch + " ");
             }
 
-            Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
-            
+            Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);           
             Console.WriteLine("Введите своё имя ещё раз");
-
             var ReverseName = Console.ReadLine();
-
             Console.WriteLine("Ваше имя по буквам задом на перёд: ");
 
             for (int i = ReverseName.Length- 1; i<=0; i--)
@@ -310,14 +305,25 @@ namespace LogicApp
             int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
             Console.Write("Первый элемент: ");
             Console.WriteLine(array[0, 0]);
+
             foreach (var item in array)
             {
                 Console.Write(item + " ");
             }
+
             Console.Write("Количество строк: ");
             Console.WriteLine(array.GetUpperBound(0) + 1 + " ");
             Console.Write("Количество колонок: ");
             Console.WriteLine(array.GetUpperBound(1) + 1 + " ");
+            Console.Write("А теперь пройдёмся по строкам");
+
+            for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
+            {
+                for (int n = 0; n < array.GetUpperBound(1) + 1; n++)
+                    Console.Write(array[i, n] + " ");
+
+                Console.WriteLine();
+            }
 
             Console.ReadKey();
         }
