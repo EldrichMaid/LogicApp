@@ -377,6 +377,19 @@ namespace LogicApp
                 }
             }
 
+            Console.Write("Перебор зубчатого массива");
+            int[][] SpikeArray = new int[3][];
+            SpikeArray[0] = new int[2] { 1, 2 };
+            SpikeArray[1] = new int[3] { 1, 2, 3 };
+            SpikeArray[2] = new int[5] { 1, 2, 3, 4, 5 };
+            foreach (var elem in SpikeArray)
+            {
+                foreach (var item in elem)
+                {
+                    Console.Write(item + " ");
+                }
+            }
+
             Console.ReadKey();
         }
     }
