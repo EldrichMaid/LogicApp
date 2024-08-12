@@ -449,11 +449,7 @@ namespace LogicApp
             Pet.Type = Console.ReadLine();
             Console.Write("Введите возраст цифрами: ");
             Pet.Age = double.Parse(Console.ReadLine());
-            Pet.NameCount = 0;
-            foreach (var item in Pet.Name) 
-            {
-                Pet.NameCount++;
-            }
+            Pet.NameCount = Pet.Name.Length;           
             Console.WriteLine("Имя питомца: {0}", Pet.Name);
             Console.WriteLine("Тип питомца: {0}", Pet.Type);
             Console.WriteLine("Возраст питомца: {0}", Pet.Age);            
