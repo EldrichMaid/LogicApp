@@ -407,7 +407,7 @@ namespace LogicApp
                 if (item > 0) CounterXY ++;
             }
             Console.WriteLine(CounterXY);
-            int LocalXY = 0;
+            int LocalXY;
             for (int i = 0; i < SearchArrayXY.GetUpperBound(0); i++)
             {
                 for (int j = i; j < SearchArrayXY.GetUpperBound(1); j++)
@@ -435,11 +435,30 @@ namespace LogicApp
             Console.WriteLine("Ваше имя: {0}", naming);
             Console.WriteLine("Ваш возраст: {0}", age);
             Console.Write("Введите имя: ");
-            name = Console.ReadLine();
-            Console.Write("Введите возраст с цифрами: ");
+            naming = Console.ReadLine();
+            Console.Write("Введите возраст цифрами: ");
             age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ваше имя: {0}",naming);
             Console.WriteLine("Ваш возраст: {0}",age);
+
+            Console.Write("Питомец");
+            (string Name, string Type, double Age, int NameCount) Pet;
+            Console.Write("Введите имя: ");
+            Pet.Name = Console.ReadLine();
+            Console.Write("Введите тип: ");
+            Pet.Type = Console.ReadLine();
+            Console.Write("Введите возраст цифрами: ");
+            Pet.Age = double.Parse(Console.ReadLine());
+            Pet.NameCount = 0;
+            foreach (var item in Pet.Name) 
+            {
+                Pet.NameCount++;
+            }
+            Console.WriteLine("Имя питомца: {0}", Pet.Name);
+            Console.WriteLine("Тип питомца: {0}", Pet.Type);
+            Console.WriteLine("Возраст питомца: {0}", Pet.Age);            
+            Console.WriteLine("Количество символов в имени: {0}", Pet.NameCount);
+
 
             Console.ReadKey();
         }
