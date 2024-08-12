@@ -368,6 +368,15 @@ namespace LogicApp
             Console.Write("Суммируем");
             Console.WriteLine(sum);
 
+            Console.Write("Зубчатый массив");
+            foreach (var hew in favcolors)
+            {
+                foreach (var item in hew)
+                {
+                    Console.Write(item + " ");
+                }
+            }
+
             Console.ReadKey();
         }
     }
