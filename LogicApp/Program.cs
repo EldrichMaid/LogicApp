@@ -1,4 +1,5 @@
 ﻿using System.Net.Security;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LogicApp
 {
@@ -245,7 +246,44 @@ namespace LogicApp
 
             }
 
-            Console.ReadKey();
+            string[] favcolors = new string[3];
+
+            for (int i = 0; i < favcolors.Length; i++)
+            {
+                Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
+                favcolors[i] = Console.ReadLine();
+            }
+
+            foreach (var MassColor in favcolors)
+            {
+                switch (MassColor)
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is red!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is green!");
+                        break;
+
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is cyan!");
+                        break;
+                    default:
+                        continue;
+                }
+            }
+
+                Console.ReadKey();
         }
     }
 }
