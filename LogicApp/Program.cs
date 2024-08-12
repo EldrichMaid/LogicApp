@@ -430,6 +430,17 @@ namespace LogicApp
             Console.WriteLine("Ваше имя: {0}", anketa.name);
             Console.WriteLine("Ваш возраст: {0}", anketa.age);
 
+            Console.Write("Ещё раз");
+            var (naming, age) = ("Иван", 28);
+            Console.WriteLine("Ваше имя: {0}", naming);
+            Console.WriteLine("Ваш возраст: {0}", age);
+            Console.Write("Введите имя: ");
+            name = Console.ReadLine();
+            Console.Write("Введите возраст с цифрами: ");
+            age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ваше имя: {0}",naming);
+            Console.WriteLine("Ваш возраст: {0}",age);
+
             Console.ReadKey();
         }
     }
