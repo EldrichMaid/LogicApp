@@ -390,6 +390,15 @@ namespace LogicApp
                 }
             }
 
+            Console.Write("Поищем положительные числа");
+            int[] SearchArray = {5,-6,43,-57,12,6,-8,0,32,-8,54,98,-65 };
+            int Counter = 0;
+            for (int i = 0; i < SearchArray.Length; i++)
+            { 
+                if (SearchArray[i] > 0) Counter++;
+            }
+            Console.WriteLine(Counter);
+
             Console.ReadKey();
         }
     }
