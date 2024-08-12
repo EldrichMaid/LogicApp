@@ -407,6 +407,20 @@ namespace LogicApp
                 if (item > 0) CounterXY ++;
             }
             Console.WriteLine(CounterXY);
+            int LocalXY = 0;
+            for (int i = 0; i < SearchArrayXY.GetUpperBound(0); i++)
+            {
+                for (int j = i; j < SearchArrayXY.GetUpperBound(1); j++)
+                {
+                    for (int o = i + 1; o < SearchArrayXY.GetUpperBound(1); o++)
+                        if (SearchArrayXY[i,j] > SearchArrayXY[i,o])
+                    {
+                        LocalXY = SearchArrayXY[i,o];
+                        SearchArrayXY[i, o] = SearchArrayXY[i,j];
+                        SearchArrayXY[i,j] = LocalXY;
+                    }
+                }
+            }
 
             Console.ReadKey();
         }
