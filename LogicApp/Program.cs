@@ -352,10 +352,21 @@ namespace LogicApp
                 }
             }
 
+            Console.Write("Упорядочиваем массив по возрастанию");
             foreach (var result in TestArray)
             {
                 Console.Write(result);
             }
+
+            int sum = 0;
+
+            for (int i = 0; i < TestArray.Length; i++)
+            {
+                sum += TestArray[i];
+            }
+
+            Console.Write("Суммируем");
+            Console.WriteLine(sum);
 
             Console.ReadKey();
         }
